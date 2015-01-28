@@ -12,7 +12,27 @@ if(str.indexOf(i)===-1){
 
 }
 return excludedNum;
+
 }
+
+
+
+function swapFun(str){
+  var regMe = new RegExp(/\s/);
+     var split = str.split(regMe);
+     
+  var rev=  split.reverse(function(x,y){
+        
+        return y-x;
+        
+    });
+    
+    return rev.join(", ");
+
+}
+
+
+
 
 
 
