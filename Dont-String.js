@@ -17,35 +17,34 @@ function swapFun(str){
   var split = str.split(regMe);   
   var rev =  split.reverse(function(x,y){
         
-    return y-x;
-    });
+  return y-x;
+});
     
   return rev.join(", ");
 }
 
-function circleMatch(str1,str2){
-  var double_str = str1.concat(str1);
-  return double_str;
+function isPartOf(str1,str2){
+  var checker = new RegExp(str2);
+  var matchcheck = checker.test(str1.concat(str1));
+ 
+  return matchcheck;   
 }
 
 
 function palindrome(str){
-  var check = str1.reverse;
-  return check === str;
+  var splitarr = str.split('');
+  
+  splitarr.reverse(function(x,y){
+    return y-x;
+  });
+  var combinearr = splitarr.join('');
+  console.log(combinearr);
+  console.log(str);
+  return combinearr === str;
 
 }
 
-
-function isPartOf(str1,str2){
-
-var reg = new RegExp(str2);
-  var s =reg.test(str1.concat(str1));
-return s;
-
-    
-}
-
-
+console.log(palindrome('racecar'));
 
 
 
