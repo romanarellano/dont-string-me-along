@@ -1,8 +1,9 @@
 function missingNum(str){
 
   var excludedNum=[];
-
-  for(var i=0;i<10;i++){
+  var start = str.substr(0,2);
+  var end = str.substr(-3);
+  for(var i=start;i<parseInt(end);i++){
     if(str.indexOf(i)===-1){
       excludedNum.push(i);
     }
@@ -11,6 +12,8 @@ function missingNum(str){
   return excludedNum;
 
 }
+
+console.log(missingNum('9899100101103104105'));
 
 function swapFun(str){
   var regMe = new RegExp(/\s/);
@@ -33,7 +36,7 @@ function isPartOf(str1,str2){
 
 function palindrome(str){
   var splitarr = str.split('');
-  
+
   splitarr.reverse(function(x,y){
     return y-x;
   });
