@@ -3,7 +3,7 @@ function missingNum(str){
   var excludedNum=[];
   var start = str.substr(0,2);
   var end = str.substr(-3);
-  for(var i=start;i<parseInt(end);i++){
+  for(var i=start;i<=parseInt(end);i++){
     if(str.indexOf(i)===-1){
       excludedNum.push(i);
     }
