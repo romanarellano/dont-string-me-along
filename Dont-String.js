@@ -33,6 +33,16 @@ function swapFun(str){
 
 
 
+function isPartOf(str1,str2){
+
+var reg = new RegExp(str2);
+  var s =reg.test(str1.concat(str1));
+return s;
+
+    
+}
+
+
 
 
 
